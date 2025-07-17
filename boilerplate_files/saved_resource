@@ -1,0 +1,381 @@
+<!doctype html>
+<html data-bs-theme="" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <!-- CSRF Token -->
+    <meta content="NKr3GpICM7CqmCtmtkKYEcZI1tn2bgf7cIwLU4ss" name="csrf-token">
+
+    <title>Laravel</title>
+
+    
+    <link href="http://127.0.0.1:8000/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Scripts -->
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}</style>
+    <link rel="preload" as="style" href="http://127.0.0.1:8000/build/assets/app-D0JnMJp_.css" /><link rel="modulepreload" href="http://127.0.0.1:8000/build/assets/app-CQlGXzAi.js" /><link rel="stylesheet" href="http://127.0.0.1:8000/build/assets/app-D0JnMJp_.css" data-navigate-track="reload" /><script type="module" src="http://127.0.0.1:8000/build/assets/app-CQlGXzAi.js" data-navigate-track="reload"></script>
+    
+
+</head>
+
+<body>
+    <div id="app">
+		<div class="d-flex align-items-center p-4">
+        <h5 class="mb-0">steelants/laravel-boilerplate</h5>
+        <nav class="d-flex gap-2 ms-auto">
+                                                <a href="http://127.0.0.1:8000/login" class="btn text-nowrap">
+                        Log in
+                    </a>
+                
+                                    <a href="http://127.0.0.1:8000/register" class="btn">
+                        Register
+                    </a>
+                                        <label class="dropdown-item ms-2">
+                <i class="dropdown-ico fas fa-moon"></i>
+                <div class="form-switch lh-1">
+                    <input class="form-check-input me-0" id="datk-theme" onchange="toggleDatkTheme()" type="checkbox">
+                </div>
+            </label>
+        </nav>
+    </div>
+
+    <div class="container-xl py-8">
+        <div class="text-center">
+            <img class="mb-4" src="http://127.0.0.1:8000/storage/images/logo.png">
+            <h1>steelants/laravel-boilerplate</h1>
+            <a href="https://github.com/steelants/Laravel-Boilerplate">https://github.com/steelants/Laravel-Boilerplate</a>
+        </div>
+
+        <div class="mt-8 text-center">
+            <h4>Other packages</h4>
+            <div class="d-flex flex-wrap gap-4 align-items-center justify-content-center">
+                <a href="https://github.com/steelants/laravel-auth" target="_blank" class="btn border">laravel-auth</a>
+                <a href="https://github.com/steelants/Livewire-DataTable" target="_blank" class="btn border">datatable</a>
+                <a href="https://github.com/steelants/Laravel-Form" target="_blank" class="btn border">form</a>
+                <a href="https://github.com/steelants/Livewire-Modal" target="_blank" class="btn border">modal</a>
+                <a href="https://github.com/steelants/Laravel-Tenant" target="_blank" class="btn border">laravel-tenant</a>
+                <a href="https://github.com/steelants/Livewire-Form" target="_blank" class="btn border">livewire-form</a>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            Created by <br>
+            <a href="https://steelants.cz" target="_blank" class="d-inline-block">
+                <img class="mb-4 dark-invert" src="http://127.0.0.1:8000/storage/images/steelants.png" width="130px">
+            </a>
+        </div>
+
+        <div class="card card-body p-0" style="height: 500px">
+            <div class="layout">
+                <div class="layout-nav " id="layout-nav">
+                    <div class="sidebar">
+                        <div class="sidebar-header">
+                            <div class="dropdown">
+                                <div class="d-flex align-items-center">
+                                    <div class="app-nav-header flex-grow-1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="app-nav-logo random-bg-2">LB</div>
+                                        <div class="app-nav-header-content nav-collapsed-hide">
+                                            <div class="fw-semibold">Laravel Boilerplate</div>
+                                            <small class="text-body-secondary">steelants.cz</small>
+                                        </div>
+                                        <div class="ms-auto nav-collapsed-hide">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                class="bi bi-chevron-expand" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708m0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown-menu" style="">
+                                        <a class="dropdown-item" href="#">
+                                            <div class="dropdown-img random-bg-2">
+                                                SA
+                                            </div>
+
+                                            <div class="lh-1">
+                                                <div class="fw-semibold">Steelants</div>
+                                                <small class="text-body-secondary">1 member</small>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+
+                                            <div class="dropdown-img">
+                                                <img src="#storage/images/logo.png" width="2rem" height="2rem">
+                                            </div>
+                                            <div class="lh-1">
+                                                <div class="fw-semibold">Anthill</div>
+                                                <small class="text-body-secondary">42 members</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-content">
+                            <ul class="app-nav nav flex-column">
+                                <li class="nav-item is-active">
+                                    <a class="nav-link" href="#home">
+                                        <i class="nav-link-ico  fas fa-home"></i>
+                                        <div class="nav-link-title">Home</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+    <a class="nav-link" href="http://default.devtool.local/task">
+        <i class="nav-link-ico  fas fa-list"></i>
+        <div class="nav-link-title">Tasks</div>
+    </a>
+    <div class="subnav ps-3">
+        <div class="">
+            <div class="">
+
+                <div class="d-flex align-items-center">
+                    <div class="flex-grow-1 text-body-tertiary nav-collapsed-hide d-flex align-items-center small nav-title-toggle py-2 "
+                        data-bs-target="#subnav-task-active" data-bs-toggle="collapse">
+                        <i class="fas fa-angle-down collapse-icon"></i>
+                        <span class="fw-medium">Projects</span>
+                    </div>
+
+                    <button class="btn btn-sq btn-sm">
+                        <i class="me-2 fas fa-plus text-body-secondary"></i>
+                    </button>
+                </div>
+
+                <div class="collapse remember show" id="subnav-task-active">
+                    <ul class="app-nav nav flex-column">
+                        <li class="nav-item nav-item-with-addons ">
+                            <div class="nav-link hover-group position-relative">
+                                <button class="btn btn-sq hover-block position-absolute start-0 collapsed"
+                                    data-bs-target="#sub-t-p1" data-bs-toggle="collapse">
+                                    <i class="fa fa-angle-down collapse-icon"></i>
+                                </button>
+                                <a class="d-flex align-items-center flex-grow-1 gap-2"
+                                    href="#task?project=VL&amp;filter=&amp;milestone=">
+                                    <i class="nav-link-ico fas fa-folder hover-hidden"></i>
+                                    <div class="nav-link-title">Vilma Lakin</div>
+                                </a>
+                                <div class="dropdown position-static">
+                                    <button class="btn btn-sq hover-block" data-bs-toggle="dropdown" type="button">
+                                        <i class="text-body-secondary fas fa-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#setting/projects/VL/detail">
+                                            <i class="dropdown-ico fas fa-cog"></i> Properties
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="w-100 remember collapse " id="sub-t-p1">
+                            <ul class="ps-3 nav flex-column">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#task?milestone=2&amp;filter=&amp;project=">
+                                        <i class="nav-link-ico far fa-flag"></i>
+                                        <div class="nav-link-title">Prof. Quinton Jast</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-with-addons ">
+                            <div class="nav-link hover-group position-relative">
+                                <button class="btn btn-sq hover-block position-absolute start-0 "
+                                    data-bs-target="#sub-t-p2" data-bs-toggle="collapse">
+                                    <i class="fa fa-angle-down collapse-icon"></i>
+                                </button>
+                                <a class="d-flex align-items-center flex-grow-1 gap-2"
+                                    href="#task?project=DSMJ&amp;filter=&amp;milestone=">
+                                    <i class="nav-link-ico fas fa-folder hover-hidden"></i>
+                                    <div class="nav-link-title">Dr. Stevie Miller Jr.</div>
+                                </a>
+                                <div class="dropdown position-static">
+                                    <button class="btn btn-sq hover-block" data-bs-toggle="dropdown" type="button">
+                                        <i class="text-body-secondary fas fa-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#setting/projects/DSMJ/detail">
+                                            <i class="dropdown-ico fas fa-cog"></i> Properties
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="w-100 remember collapse show" id="sub-t-p2">
+                            <ul class="ps-3 nav flex-column">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#task?milestone=4&amp;filter=&amp;project=">
+                                        <i class="nav-link-ico far fa-flag"></i>
+                                        <div class="nav-link-title">Dr. Catalina Wyman PhD</div>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#task?milestone=5&amp;filter=&amp;project=">
+                                        <i class="nav-link-ico far fa-flag"></i>
+                                        <div class="nav-link-title">Laurine Barrows</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-item-with-addons ">
+                            <div class="nav-link hover-group position-relative">
+                                <button class="btn btn-sq hover-block position-absolute start-0 collapsed"
+                                    data-bs-target="#sub-t-p3" data-bs-toggle="collapse">
+                                    <i class="fa fa-angle-down collapse-icon"></i>
+                                </button>
+                                <a class="d-flex align-items-center flex-grow-1 gap-2"
+                                    href="#task?project=RG&amp;filter=&amp;milestone=">
+                                    <i class="nav-link-ico fas fa-folder hover-hidden"></i>
+                                    <div class="nav-link-title">Ross Gulgowski</div>
+                                </a>
+                                <div class="dropdown position-static">
+                                    <button class="btn btn-sq hover-block" data-bs-toggle="dropdown" type="button">
+                                        <i class="text-body-secondary fas fa-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#setting/projects/RG/detail">
+                                            <i class="dropdown-ico fas fa-cog"></i> Properties
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+                <div class="text-body-tertiary nav-collapsed-hide d-flex align-items-center small nav-title-toggle py-2 collapsed"
+                    data-bs-target="#subnav-task-archived" data-bs-toggle="collapse">
+                    <i class="fas fa-angle-down collapse-icon"></i>
+                    <span class="fw-medium">Archived</span>
+                </div>
+                <div class="remember collapse " id="subnav-task-archived">
+                    <ul class="app-nav nav flex-column">
+                        ...
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-footer">
+                            <ul class="app-nav nav flex-column mb-1 hide-mobile">
+                                <li class="nav-item">
+                                    <div type="button" class="nav-link" onclick="toggleLayoutNav()">
+                                        <i class="nav-link-ico fas fa-chevron-left nav-collapsed-hide"></i>
+                                        <i class="nav-link-ico fas fa-chevron-right nav-collapsed-show"></i>
+                                        <div class="nav-link-title">Toggle menu</div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="dropup">
+                                <a class="app-nav-user" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="avatar avatar-md random-bg-5 app-nav-profile" title=" Test User">
+                                        TU
+                                    </div>
+
+                                    <div class="app-nav-header-content nav-collapsed-hide">
+                                        <div class="fw-semibold">Test User</div>
+                                        <small class="text-body-secondary">test@example.com</small>
+                                    </div>
+                                    <div class="ms-auto nav-collapsed-hide">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </a>
+
+                                <div class="dropdown-menu" style="">
+                                    <div class="dropdown-header d-flex align-items-center">
+                                        <div class="fw-semibold me-auto">Test User</div>
+                                        <small class="text-body-tertiary">v1.23</small>
+                                    </div>
+
+                                    <a class="dropdown-item" href="#profile">
+                                        <i class="dropdown-ico  fas fa-user"></i>
+                                        Profile
+                                    </a>
+
+                                    <label class="dropdown-item">
+                                        <i class="dropdown-ico fas fa-moon"></i>
+                                        <div class="me-auto">Dark Mode</div>
+                                        <div class="form-switch lh-1">
+                                            <input class="form-check-input me-0" id="datk-theme" onchange="toggleDatkTheme()"
+                                                type="checkbox">
+                                        </div>
+                                    </label>
+
+                                    <a class="dropdown-item" href="#profile/api">
+                                        <i class="dropdown-ico  fas fa-server"></i>
+                                        Api Tokens
+                                    </a>
+
+                                    <hr class="dropdown-divider">
+
+                                    <a class="dropdown-item" href="#logout"
+                                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                        <i class="dropdown-ico  fas fa-sign-out-alt text-danger"></i>
+                                        Logout
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layout-content">
+                    <div class="content">
+                        <div class="container-xl">
+                            <div class="page-header">
+                                <h1>Welcolm Back !</h1>
+                                <a class="btn btn-primary" href="#home"><i class="fa fa-plus me-2"></i> Page Action</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="snackbar-container">
+    </div>
+
+    <!-- Livewire Scripts -->
+<script src="/livewire/livewire.js?id=13b7c601"   data-csrf="NKr3GpICM7CqmCtmtkKYEcZI1tn2bgf7cIwLU4ss" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+    <div wire:snapshot="{&quot;data&quot;:{&quot;livewireComponents&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;livewireComponentParameters&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;model&quot;:null,&quot;parameters&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;modalId&quot;:&quot;modal-BgTPs&quot;,&quot;title&quot;:null,&quot;size&quot;:null,&quot;static&quot;:null},&quot;memo&quot;:{&quot;id&quot;:&quot;OcX3odTrCVWaebVxLKqa&quot;,&quot;name&quot;:&quot;modal-basic&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[&quot;1412780513-0&quot;],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;dd1e4a8d1a3fd81028d7de3e627e24e1ecb0a9f7b156faa9b19de5dc7fb67682&quot;}" wire:effects="{&quot;scripts&quot;:{&quot;1412780513-0&quot;:&quot;        &lt;script&gt;\n            const myModalEl = document.getElementById(&#039;modal-BgTPs&#039;);\n            Livewire.on(&#039;openModal&#039;, event =&gt; {\n                (bootstrap.Modal.getOrCreateInstance(&#039;#modal-BgTPs&#039;, {&#039;backdrop&#039;: event.static ? &#039;static&#039; : true, &#039;keyboard&#039;: !event.static})).show();\n            })\n            Livewire.on(&#039;closeModal&#039;, event =&gt; {\n                (bootstrap.Modal.getInstance(myModalEl)).hide();\n            })\n            window.addEventListener(&#039;close-modal&#039;, function() {\n                (bootstrap.Modal.getInstance(myModalEl)).hide();\n            })\n            myModalEl.addEventListener(&#039;hidden.bs.modal&#039;, event =&gt; {\n                Livewire.dispatch(&#039;closeModal&#039;);\n            })\n        &lt;\/script&gt;\n        &quot;},&quot;listeners&quot;:[&quot;openModal&quot;,&quot;closeModal&quot;]}" wire:id="OcX3odTrCVWaebVxLKqa">
+    <div aria-hidden="true" aria-labelledby="modal-BgTPs-label" class="modal fade" id="modal-BgTPs" tabindex="-1" wire:ignore.self>
+        <div class="modal-dialog modal- modal-fullscreen-sm-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                                        <h5 class="modal-title" id="modal-BgTPs-label"></h5>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <!--[if BLOCK]><![endif]-->                        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                    <!--[if ENDBLOCK]><![endif]-->
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </body>
+
+</html>

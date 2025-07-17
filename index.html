@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>steelants/laravel-boilerplate</title>
+
+    <link href="http://127.0.0.1:8000/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="./boilerplate_files/css2" rel="stylesheet">
+
+
+    <!-- Scripts -->
+    <!-- Livewire Styles -->
+    <style>
+        [wire\:loading][wire\:loading],
+        [wire\:loading\.delay][wire\:loading\.delay],
+        [wire\:loading\.inline-block][wire\:loading\.inline-block],
+        [wire\:loading\.inline][wire\:loading\.inline],
+        [wire\:loading\.block][wire\:loading\.block],
+        [wire\:loading\.flex][wire\:loading\.flex],
+        [wire\:loading\.table][wire\:loading\.table],
+        [wire\:loading\.grid][wire\:loading\.grid],
+        [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {
+            display: none;
+        }
+
+        [wire\:loading\.delay\.none][wire\:loading\.delay\.none],
+        [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest],
+        [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter],
+        [wire\:loading\.delay\.short][wire\:loading\.delay\.short],
+        [wire\:loading\.delay\.default][wire\:loading\.delay\.default],
+        [wire\:loading\.delay\.long][wire\:loading\.delay\.long],
+        [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer],
+        [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {
+            display: none;
+        }
+
+        [wire\:offline][wire\:offline] {
+            display: none;
+        }
+
+        [wire\:dirty]:not(textarea):not(input):not(select) {
+            display: none;
+        }
+
+        :root {
+            --livewire-progress-bar-color: #2299dd;
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+    <link rel="preload" as="style" href="./boilerplate_files/app-D0JnMJp_.css">
+    <link rel="modulepreload" href="./boilerplate_files/app-CQlGXzAi.js">
+    <link rel="stylesheet" href="./boilerplate_files/app-D0JnMJp_.css" data-navigate-track="reload">
+    <script type="module" src="./boilerplate_files/app-CQlGXzAi.js" data-navigate-track="reload"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="border-bottom d-flex align-items-center p-2">
+            <img class="border rounded-5 me-2" src="./boilerplate_files/logo.png" height="50">
+            <h5 class="mb-0">steelants/laravel-boilerplate</h5>
+            <nav class="d-flex gap-2 ms-auto">
+                <a href="https://github.com/steelants/Laravel-Boilerplate">
+                    <img class="me-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" height="50">
+                </a>
+                <label class="dropdown-item ms-2">
+                    <i class="dropdown-ico fas fa-moon"></i>
+                    <div class="form-switch lh-1">
+                        <input class="form-check-input me-0" id="datk-theme" onchange="toggleDatkTheme()" type="checkbox">
+                    </div>
+                </label>
+            </nav>
+        </div>
+
+        <div class="container-xl py-8">
+            <div class="text-center">
+                <img class="mb-4 border rounded-5" src="./boilerplate_files/logo.png">
+                <h1>steelants/laravel-boilerplate</h1>
+                <div class="d-flex justify-content-around">
+                    <div class="bg-info rounded-4 p-2">composer require steelants/laravel-boilerplate</div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <h4>Other packages</h4>
+                <div class="d-flex flex-wrap gap-4 align-items-center justify-content-center">
+                    <a href="https://github.com/steelants/laravel-auth" target="_blank" class="btn border">laravel-auth</a>
+                    <a href="https://github.com/steelants/Livewire-DataTable" target="_blank" class="btn border">datatable</a>
+                    <a href="https://github.com/steelants/Laravel-Form" target="_blank" class="btn border">form</a>
+                    <a href="https://github.com/steelants/Livewire-Modal" target="_blank" class="btn border">modal</a>
+                    <a href="https://github.com/steelants/Laravel-Tenant" target="_blank" class="btn border">laravel-tenant</a>
+                    <a href="https://github.com/steelants/Livewire-Form" target="_blank" class="btn border">livewire-form</a>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                Created by <br>
+                <a href="https://steelants.cz/" target="_blank" class="d-inline-block">
+                    <img class="mb-4 dark-invert" src="./boilerplate_files/steelants.png" width="130px">
+                </a>
+            </div>
+
+            <div class="card card-body p-0" style="height: 500px">
+                <div class="layout">
+                    <div class="layout-nav " id="layout-nav">
+                        <div class="sidebar">
+                            <div class="sidebar-header">
+                                <div class="dropdown">
+                                    <div class="d-flex align-items-center">
+                                        <div class="app-nav-header flex-grow-1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <div class="app-nav-logo random-bg-2">LB</div>
+                                            <div class="app-nav-header-content nav-collapsed-hide">
+                                                <div class="fw-semibold">Laravel Boilerplate</div>
+                                                <small class="text-body-secondary">steelants.cz</small>
+                                            </div>
+                                            <div class="ms-auto nav-collapsed-hide">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-expand" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708m0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="dropdown-menu" style="">
+                                            <a class="dropdown-item" href="http://127.0.0.1:8000/#">
+                                                <div class="dropdown-img random-bg-2">
+                                                    SA
+                                                </div>
+
+                                                <div class="lh-1">
+                                                    <div class="fw-semibold">Steelants</div>
+                                                    <small class="text-body-secondary">1 member</small>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item" href="http://127.0.0.1:8000/#">
+
+                                                <div class="dropdown-img">
+                                                    <img src="./boilerplate_files/saved_resource" width="2rem" height="2rem">
+                                                </div>
+                                                <div class="lh-1">
+                                                    <div class="fw-semibold">Anthill</div>
+                                                    <small class="text-body-secondary">42 members</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-content">
+                                <ul class="app-nav nav flex-column">
+                                    <li class="nav-item is-active">
+                                        <a class="nav-link" href="http://127.0.0.1:8000/#home">
+                                            <i class="nav-link-ico  fas fa-home"></i>
+                                            <div class="nav-link-title">Home</div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="http://default.devtool.local/task">
+                                            <i class="nav-link-ico  fas fa-list"></i>
+                                            <div class="nav-link-title">Tasks</div>
+                                        </a>
+                                        <div class="subnav ps-3">
+                                            <div class="">
+                                                <div class="">
+
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-grow-1 text-body-tertiary nav-collapsed-hide d-flex align-items-center small nav-title-toggle py-2 " data-bs-target="#subnav-task-active" data-bs-toggle="collapse">
+                                                            <i class="fas fa-angle-down collapse-icon"></i>
+                                                            <span class="fw-medium">Projects</span>
+                                                        </div>
+
+                                                        <button class="btn btn-sq btn-sm">
+                                                            <i class="me-2 fas fa-plus text-body-secondary"></i>
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="collapse remember show" id="subnav-task-active">
+                                                        <ul class="app-nav nav flex-column">
+                                                            <li class="nav-item nav-item-with-addons ">
+                                                                <div class="nav-link hover-group position-relative">
+                                                                    <button class="btn btn-sq hover-block position-absolute start-0 collapsed" data-bs-target="#sub-t-p1" data-bs-toggle="collapse">
+                                                                        <i class="fa fa-angle-down collapse-icon"></i>
+                                                                    </button>
+                                                                    <a class="d-flex align-items-center flex-grow-1 gap-2" href="http://127.0.0.1:8000/#task?project=VL&amp;filter=&amp;milestone=">
+                                                                        <i class="nav-link-ico fas fa-folder hover-hidden"></i>
+                                                                        <div class="nav-link-title">Vilma Lakin</div>
+                                                                    </a>
+                                                                    <div class="dropdown position-static">
+                                                                        <button class="btn btn-sq hover-block" data-bs-toggle="dropdown" type="button">
+                                                                            <i class="text-body-secondary fas fa-ellipsis-h"></i>
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="http://127.0.0.1:8000/#setting/projects/VL/detail">
+                                                                                <i class="dropdown-ico fas fa-cog"></i> Properties
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+                                                            <li class="w-100 remember collapse " id="sub-t-p1">
+                                                                <ul class="ps-3 nav flex-column">
+                                                                    <li class="nav-item ">
+                                                                        <a class="nav-link" href="http://127.0.0.1:8000/#task?milestone=2&amp;filter=&amp;project=">
+                                                                            <i class="nav-link-ico far fa-flag"></i>
+                                                                            <div class="nav-link-title">Prof. Quinton Jast</div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="nav-item nav-item-with-addons ">
+                                                                <div class="nav-link hover-group position-relative">
+                                                                    <button class="btn btn-sq hover-block position-absolute start-0 " data-bs-target="#sub-t-p2" data-bs-toggle="collapse">
+                                                                        <i class="fa fa-angle-down collapse-icon"></i>
+                                                                    </button>
+                                                                    <a class="d-flex align-items-center flex-grow-1 gap-2" href="http://127.0.0.1:8000/#task?project=DSMJ&amp;filter=&amp;milestone=">
+                                                                        <i class="nav-link-ico fas fa-folder hover-hidden"></i>
+                                                                        <div class="nav-link-title">Dr. Stevie Miller Jr.</div>
+                                                                    </a>
+                                                                    <div class="dropdown position-static">
+                                                                        <button class="btn btn-sq hover-block" data-bs-toggle="dropdown" type="button">
+                                                                            <i class="text-body-secondary fas fa-ellipsis-h"></i>
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="http://127.0.0.1:8000/#setting/projects/DSMJ/detail">
+                                                                                <i class="dropdown-ico fas fa-cog"></i> Properties
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+                                                            <li class="w-100 remember collapse show" id="sub-t-p2">
+                                                                <ul class="ps-3 nav flex-column">
+                                                                    <li class="nav-item ">
+                                                                        <a class="nav-link" href="http://127.0.0.1:8000/#task?milestone=4&amp;filter=&amp;project=">
+                                                                            <i class="nav-link-ico far fa-flag"></i>
+                                                                            <div class="nav-link-title">Dr. Catalina Wyman PhD</div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="nav-item ">
+                                                                        <a class="nav-link" href="http://127.0.0.1:8000/#task?milestone=5&amp;filter=&amp;project=">
+                                                                            <i class="nav-link-ico far fa-flag"></i>
+                                                                            <div class="nav-link-title">Laurine Barrows</div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="nav-item nav-item-with-addons ">
+                                                                <div class="nav-link hover-group position-relative">
+                                                                    <button class="btn btn-sq hover-block position-absolute start-0 collapsed" data-bs-target="#sub-t-p3" data-bs-toggle="collapse">
+                                                                        <i class="fa fa-angle-down collapse-icon"></i>
+                                                                    </button>
+                                                                    <a class="d-flex align-items-center flex-grow-1 gap-2" href="http://127.0.0.1:8000/#task?project=RG&amp;filter=&amp;milestone=">
+                                                                        <i class="nav-link-ico fas fa-folder hover-hidden"></i>
+                                                                        <div class="nav-link-title">Ross Gulgowski</div>
+                                                                    </a>
+                                                                    <div class="dropdown position-static">
+                                                                        <button class="btn btn-sq hover-block" data-bs-toggle="dropdown" type="button">
+                                                                            <i class="text-body-secondary fas fa-ellipsis-h"></i>
+                                                                        </button>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" href="http://127.0.0.1:8000/#setting/projects/RG/detail">
+                                                                                <i class="dropdown-ico fas fa-cog"></i> Properties
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="text-body-tertiary nav-collapsed-hide d-flex align-items-center small nav-title-toggle py-2 collapsed" data-bs-target="#subnav-task-archived" data-bs-toggle="collapse">
+                                                        <i class="fas fa-angle-down collapse-icon"></i>
+                                                        <span class="fw-medium">Archived</span>
+                                                    </div>
+                                                    <div class="remember collapse " id="subnav-task-archived">
+                                                        <ul class="app-nav nav flex-column">
+                                                            ...
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="sidebar-footer">
+                                <ul class="app-nav nav flex-column mb-1 hide-mobile">
+                                    <li class="nav-item">
+                                        <div type="button" class="nav-link" onclick="toggleLayoutNav()">
+                                            <i class="nav-link-ico fas fa-chevron-left nav-collapsed-hide"></i>
+                                            <i class="nav-link-ico fas fa-chevron-right nav-collapsed-show"></i>
+                                            <div class="nav-link-title">Toggle menu</div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="dropup">
+                                    <a class="app-nav-user" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="avatar avatar-md random-bg-5 app-nav-profile" title=" Test User">
+                                            TU
+                                        </div>
+
+                                        <div class="app-nav-header-content nav-collapsed-hide">
+                                            <div class="fw-semibold">Test User</div>
+                                            <small class="text-body-secondary">test@example.com</small>
+                                        </div>
+                                        <div class="ms-auto nav-collapsed-hide">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </a>
+
+                                    <div class="dropdown-menu" style="">
+                                        <div class="dropdown-header d-flex align-items-center">
+                                            <div class="fw-semibold me-auto">Test User</div>
+                                            <small class="text-body-tertiary">v1.23</small>
+                                        </div>
+
+                                        <a class="dropdown-item" href="http://127.0.0.1:8000/#profile">
+                                            <i class="dropdown-ico  fas fa-user"></i>
+                                            Profile
+                                        </a>
+
+                                        <label class="dropdown-item">
+                                            <i class="dropdown-ico fas fa-moon"></i>
+                                            <div class="me-auto">Dark Mode</div>
+                                            <div class="form-switch lh-1">
+                                                <input class="form-check-input me-0" id="datk-theme" onchange="toggleDatkTheme()" type="checkbox">
+                                            </div>
+                                        </label>
+
+                                        <a class="dropdown-item" href="http://127.0.0.1:8000/#profile/api">
+                                            <i class="dropdown-ico  fas fa-server"></i>
+                                            Api Tokens
+                                        </a>
+
+                                        <hr class="dropdown-divider">
+
+                                        <a class="dropdown-item" href="http://127.0.0.1:8000/#logout" onclick="event.preventDefault();document.getElementById(&#39;logout-form&#39;).submit();">
+                                            <i class="dropdown-ico  fas fa-sign-out-alt text-danger"></i>
+                                            Logout
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layout-content">
+                        <div class="content">
+                            <div class="container-xl">
+                                <div class="page-header">
+                                    <h1>Welcolm Back !</h1>
+                                    <a class="btn btn-primary" href="http://127.0.0.1:8000/#home"><i class="fa fa-plus me-2"></i> Page Action</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
